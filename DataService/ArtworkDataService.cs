@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracts;
+using DataService.Helpers;
 using FarSolution.DataAccess;
-using FarSolution.DataServices.Helpers;
 
-namespace FarSolution.DataServices
+namespace DataService
 {
     public class ArtworkDataService
     {

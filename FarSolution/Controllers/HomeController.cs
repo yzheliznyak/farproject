@@ -12,7 +12,11 @@ namespace FarSolution.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+
+            var data = new ArtworkDataService();
+
+
+            return View(data.GetAllArtworks());
         }
 
         public IActionResult About()

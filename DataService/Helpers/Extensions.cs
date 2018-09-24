@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Contracts;
+﻿using Contracts;
 using FarSolution.DataAccess.Entities;
 
-namespace FarSolution.DataServices.Helpers
+namespace DataService.Helpers
 {
     public class Extensions
     {
