@@ -3,6 +3,7 @@ using System.Linq;
 using Contracts;
 using DataService.Helpers;
 using FarSolution.DataAccess;
+using FarSolution.DataAccess.Entities;
 
 namespace DataService
 {

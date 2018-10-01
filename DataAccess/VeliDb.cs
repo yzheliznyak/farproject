@@ -1,5 +1,5 @@
-﻿using System.Data.Entity;
-using FarSolution.DataAccess.Entities;
+﻿using FarSolution.DataAccess.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace FarSolution.DataAccess
 {
@@ -7,28 +7,31 @@ namespace FarSolution.DataAccess
     {
        public DbSet<ArtworkEntity> Artworks { get; set; }
 
-        public VeliDb() : base("VeliContext")
+        public VeliDb() : base()
         {
-            Database.SetInitializer<VeliDb>(new DropCreateDatabaseIfModelChanges<VeliDb>());
-            Configuration.LazyLoadingEnabled = false;
-            Configuration.ProxyCreationEnabled = false;
+
         }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Vel\farproject\FarSolution\Data\VeliDb.mdf;Integrated Security=True;Connect Timeout=30");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            //modelBuilder.Configurations.Add(new configuration());
+            //for (int i = 1; i < 10; i++)
+            //{
+            //    modelBuilder.Entity<ArtworkEntity>().HasData(
+            //        new ArtworkEntity()
+            //        {
+            //            Id = i,
+            //            Name = $"Painting {i}",
+            //            Description = $"some test{i} description."
+            //        });
 
-            for (int i = 1; i < 10; i++)
-            {
-                Artworks.Add(new ArtworkEntity()
-                {
-                    Id = i,
-                    Name = $"Painting {i}",
-                    Description = $"some test{i} description."
-                });
-            }
+            //}
         }
 
     }
