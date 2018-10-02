@@ -1,0 +1,34 @@
+﻿body {
+    height: 100%;
+}
+
+.bg {
+    /* The image used
+    background-image: url("../images/abstract-attractive-backdrop-988872.jpg");
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.subbg {
+    /* The image used */
+    /*background-image: url("../images/abstract-attractive-backdrop-988872.jpg");*/
+    background-color: #f9f9f9;
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparentbg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.margined {
+    margin:10px; 
+}
