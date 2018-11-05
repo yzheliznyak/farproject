@@ -1,12 +1,15 @@
 ﻿@model Contracts.Artwork
 
-<div class="row">
+<div class="container-fluid">
     <div class="row align-items-center margined">
         <div class="col-md-4"><img src="~/images/holder.png"> </div>
         <div class="col-md-2">@Model.Name</div>
         <div class="col-md-3">
             <p> @Model.Description</p>
         </div>
-        <div class="col-md-3"><input class="btn" type="submit" value="Action"></div>
+        <div class="col-md-3">
+            <input class="btn bindEvent" type="submit" value="Perform">
+        </div>
+
     </div>
 </div>
